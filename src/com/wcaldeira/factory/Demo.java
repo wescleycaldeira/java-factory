@@ -8,5 +8,11 @@ public class Demo {
 
         System.out.println(polarPoint);
         System.out.println(cartesianPoint);
+
+        final Point cartesianFactory = PointFactory.newCartesian(4, 5);
+        final Point polarFactory = PointFactory.newPolarPoint(4, 5);
+
+        System.out.println(cartesianFactory);
+        System.out.println(polarFactory);
     }
 }
