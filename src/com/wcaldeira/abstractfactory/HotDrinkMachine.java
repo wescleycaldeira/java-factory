@@ -13,8 +13,7 @@ public class HotDrinkMachine {
     private Map<AvailableDrink, IHotDrinkFactory> factories = new HashMap<>();
 
     public HotDrinkMachine() throws Exception{
-        for (AvailableDrink drink : AvailableDrink.values())
-        {
+        for (AvailableDrink drink : AvailableDrink.values()) {
             String s = drink.toString();
             String factoryName = "" + Character.toUpperCase(s.charAt(0)) + s.substring(1).toLowerCase();
             Class<?> factory = Class.forName("com.wcaldeira.abstractfactory." + factoryName + "Factory");
